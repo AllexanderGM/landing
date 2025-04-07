@@ -1,0 +1,397 @@
+/* Namari Landing Page Dynamic Style Index
+
+1. Website Default Styling
+2. Navigation
+3. Primary and Secondary Colors
+4. Banner
+5. Typography
+6. Buttons
+7. Footer
+
+/* Paleta de Colores Completa */
+:root {
+  /* Morados */
+  --morado-profundo: #35135a;
+  --morado-medio: #6b38a8;
+  --lavanda-suave: #9d7ac8;
+
+  /* Dorados */
+  --dorado-intenso: #d4af37;
+  --dorado-claro: #f1d78d;
+
+  /* Grises Neutrales */
+  --gris-50: #f9f9fb;
+  --gris-100: #f1f1f4;
+  --gris-200: #e4e4ea;
+  --gris-300: #d2d2dc;
+  --gris-400: #b4b4c0;
+  --gris-500: #9292a0;
+  --gris-600: #707080;
+  --gris-700: #585867;
+  --gris-800: #38384a;
+  --gris-900: #1e1e2c;
+
+  /* Colores Complementarios */
+  --turquesa: #45b5c4;
+  --verde-esmeralda: #47a86e;
+  --rosa-cuarzo: #f7cac9;
+  --azul-indigo: #4b0082;
+
+  /* Variables de utilidad */
+  --texto-principal: var(--gris-900);
+  --texto-secundario: var(--gris-700);
+  --texto-terciario: var(--gris-600);
+  --texto-claro: var(--gris-50);
+
+  --fondo-principal: #ffffff;
+  --fondo-secundario: var(--gris-50);
+  --fondo-terciario: var(--gris-100);
+
+  --borde-suave: var(--gris-200);
+  --borde-medio: var(--gris-300);
+  --sombra-suave: 0 2px 8px rgba(30, 30, 44, 0.1);
+  --sombra-media: 0 4px 16px rgba(30, 30, 44, 0.15);
+
+  /* Gradientes predefinidos */
+  --gradiente-morado: linear-gradient(to right, var(--morado-profundo), var(--morado-medio));
+  --gradiente-dorado: linear-gradient(to right, var(--dorado-intenso), var(--dorado-claro));
+  --gradiente-combinado: linear-gradient(to right, var(--morado-profundo), var(--dorado-intenso));
+  --gradiente-suave: linear-gradient(to right, var(--lavanda-suave), var(--dorado-claro));
+
+  /* Gradientes verticales */
+  --gradiente-morado-v: linear-gradient(to bottom, var(--morado-profundo), var(--morado-medio));
+  --gradiente-dorado-v: linear-gradient(to bottom, var(--dorado-intenso), var(--dorado-claro));
+  --gradiente-combinado-v: linear-gradient(to bottom, var(--morado-profundo), var(--dorado-intenso));
+  --gradiente-suave-v: linear-gradient(to bottom, var(--lavanda-suave), var(--dorado-claro));
+
+  /* Transiciones estandarizadas */
+  --transicion-rapida: all 0.2s ease;
+  --transicion-normal: all 0.3s ease;
+  --transicion-lenta: all 0.5s ease;
+
+  /* Espaciado y bordes */
+  --radio-pequeno: 4px;
+  --radio-medio: 8px;
+  --radio-grande: 16px;
+  --radio-redondo: 50%;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* 1. Website Default Styling */
+/*------------------------------------------------------------------------------------------*/
+
+body {
+  background: var(--gradiente-morado);
+}
+
+/* Default Link Color */
+
+a,
+.la-ball-triangle-path {
+  color: #d4af37;
+}
+
+a:hover,
+#header.nav-solid nav a:hover {
+  color: #d4af37;
+}
+
+/* Default Icon Color */
+
+.icon i {
+  color: #d4af37;
+}
+
+/* Border Color */
+
+#banner .section-heading:before,
+.testimonial.classic footer:before {
+  background: #d4af37;
+}
+
+.pricing-block-content:hover {
+  border-color: #d4af37;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* 2. Navigation */
+/*------------------------------------------------------------------------------------------*/
+
+/* Transparent Navigation Color on a Banner */
+
+#header nav a,
+#header i {
+  color: var(--gris-300);
+}
+
+/* Navigation Colors when the Navigation is sticky and solid */
+
+#header.nav-solid,
+#header.nav-solid a,
+#header.nav-solid i,
+#nav-mobile ul li a {
+  color: #333;
+}
+
+/* Navigation Active State */
+
+#header.nav-solid .active {
+  color: #d4af37;
+  border-color: #d4af37;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* 3. Primary and Secondary Colors */
+/*------------------------------------------------------------------------------------------*/
+
+/* Primary Background and Text Colors */
+
+.primary-color,
+.featured .pricing {
+  background-color: #d4af37;
+}
+
+.primary-color,
+.primary-color .section-title,
+.primary-color .section-subtitle,
+.featured .pricing,
+.featured .pricing p {
+  color: #fff;
+}
+
+.section-heading h2:after {
+  background: #d4af37;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin-top: 30px;
+}
+
+.text-center .section-heading h2:after {
+  margin: 30px auto 25px auto;
+}
+
+/* Primary Icon Colors */
+
+.primary-color .icon i,
+.primary-color i {
+  color: #fff;
+}
+
+/* Secondary Background and Text Colors */
+
+.secondary-color {
+  background-color: #f5f5f5;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* 4. Banner */
+/*------------------------------------------------------------------------------------------*/
+
+/* Banner Background and Text Colors */
+
+#banner {
+  background: url("../images/banner-images/young-woman-standing-universe-texture-projection.jpg") no-repeat center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* 5. Typography */
+/*------------------------------------------------------------------------------------------*/
+
+body {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 15px;
+  font-weight: normal;
+  color: var(--gris-300);
+}
+
+/* Logo, if you are using Fonts as Logo and not image
+
+#logo h1 {
+    font-family:;
+    font-size:; 
+    font-weight:;
+    color:;
+}
+
+#logo h2 {
+    font-family:;
+    font-size:; 
+    font-weight:;
+    color:;
+}
+
+*/
+
+/* Banner Typography */
+
+#banner h1 {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 62px;
+  line-height: 60px;
+  font-weight: 800;
+  background: var(--gradiente-dorado-v);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#banner h2 {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--gris-200);
+}
+
+/* Section Title and Subtitle */
+
+.section-title {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--gris-300);
+}
+
+.section-subtitle {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 16px;
+  font-weight: 300;
+  color: #9c9c9c;
+}
+
+/* Testimonial */
+
+.testimonial q {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.testimonial.classic q,
+.testimonial.classic footer {
+  color: var(--gris-300);
+}
+
+/* Standard Headings h1-h6 */
+
+h1 {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--gris-300);
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 34px;
+  font-weight: 300;
+  color: var(--gris-300);
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--gris-300);
+}
+
+h4 {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--gris-300);
+}
+
+h5 {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gris-300);
+}
+
+h6 {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gris-300);
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* 6. Buttons */
+/*------------------------------------------------------------------------------------------*/
+
+/* ----------Default Buttons---------- */
+
+/* Button Text */
+
+.button,
+input[type="submit"] {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--gris-300);
+}
+
+/* Button Color */
+
+.button,
+input[type="submit"] {
+  border-color: var(--gris-300);
+}
+
+/* Button Hover Color */
+
+.button:hover,
+input[type="submit"]:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+/* ----------Banner Buttons---------- */
+
+/* Button Text */
+
+#banner .button {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 16px;
+  color: var(--gris-300);
+}
+
+/* Button Color */
+
+#banner .button {
+  background: var(--gradiente-dorado);
+  border-color: var(--gris-700);
+  color: var(--gris-700);
+}
+
+/* Button Hover Color */
+
+#banner .button:hover {
+  color: #d4af37;
+  border-color: #d4af37;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/* 7. Footer */
+/*------------------------------------------------------------------------------------------*/
+
+#landing-footer,
+#landing-footer p,
+#landing-footer a {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 12px;
+  font-weight: normal;
+  color: #999;
+}
+
+/* Footer Icon Color */
+
+#landing-footer i {
+  color: #999;
+}
