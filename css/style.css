@@ -2752,18 +2752,6 @@ blockquote {
   color: var(--gris-100);
 }
 
-#testimonios-video::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/banner-images/pattern-overlay.png");
-  opacity: 0.05;
-  z-index: 0;
-}
-
 #testimonios-video .row {
   position: relative;
   z-index: 1;
