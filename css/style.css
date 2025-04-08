@@ -328,7 +328,7 @@ section {
 }
 
 .col-38 {
-  width: 38.2%;
+  width: 40.2%;
 }
 
 /* --------- 2.1 Header --------- */
@@ -705,8 +705,8 @@ nav#nav-mobile a:hover {
 
 .social-icons a {
   display: inline-block;
-  width: 32px;
   text-align: center;
+  margin-left: 20px;
 }
 
 .social-icons a:hover {
@@ -719,6 +719,15 @@ nav#nav-mobile a:hover {
 
 #header .social-icons {
   margin-top: 27px;
+}
+
+.nav-collapse.sticky.fadeIn.animated.nav-solid.fadeInDown a {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.nav-collapse.sticky.fadeIn.animated.nav-solid.fadeInDown i {
+  font-size: 1.8rem;
 }
 
 /* --------- 2.6 Images ---------- */
@@ -813,10 +822,15 @@ h6 {
 /*------------------------------------------------------------------------------------------*/
 
 #banner {
+  position: relative;
   background-size: cover;
 }
 
 #banner-content.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 170px;
   padding-bottom: 100px;
 }
@@ -831,6 +845,39 @@ h6 {
   width: 30px;
   height: 5px;
   margin-top: 30px;
+}
+
+#banner .video-container {
+  width: 50%;
+  max-width: 100%;
+}
+
+#banner .video-container video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+#banner .illustration {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 130px;
+  transform: scaleX(-1);
+}
+
+@media (max-width: 768px) {
+  #banner-content {
+    flex-direction: column;
+  }
+
+  #banner .video-container {
+    width: 50%;
+    max-width: 100%;
+    padding: 40px;
+  }
 }
 
 /*------------------------------------------------------------------------------------------*/
@@ -1004,6 +1051,12 @@ blockquote {
 
 .testimonial.bigtest q {
   font-size: 22px;
+}
+
+.illustration {
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
 }
 
 /* --------- 6.4 Gallery ---------- */
@@ -1597,18 +1650,23 @@ blockquote {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fff; /* change if the mask should have another color then white */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: var(--gradiente-morado); /* change if the mask should have another color then white */
   z-index: 99999; /* makes sure it stays on top */
 }
 
+#preloader img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 400px;
+}
+
 #status {
-  width: 110px;
-  height: 110px;
-  position: absolute;
-  left: 50%; /* centers the loading animation horizontally one the screen */
-  top: 50%; /* centers the loading animation vertically one the screen */
   background-position: center;
-  margin: -55px 0 0 -55px; /* is width and height divided by two */
   text-align: center;
 }
 

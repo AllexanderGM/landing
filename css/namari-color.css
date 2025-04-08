@@ -192,9 +192,51 @@ a:hover,
 /* Banner Background and Text Colors */
 
 #banner {
+  position: relative;
   background: url("../images/banner-images/young-woman-standing-universe-texture-projection.jpg") no-repeat center top;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+#banner:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.9500175070028011) 0%,
+    rgba(9, 5, 14, 0.8547794117647058) 21%,
+    rgba(68, 36, 107, 0.7679446778711485) 34%,
+    rgba(95, 50, 150, 0.26094187675070024) 48%,
+    rgba(97, 51, 153, 0.03405112044817926) 73%,
+    rgba(98, 52, 155, 0.31976540616246496) 95%,
+    rgba(107, 56, 168, 0.4374124649859944) 100%
+  );
+
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  #banner:before {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.9780287114845938) 0%,
+      rgba(9, 5, 14, 0.8547794117647058) 53%,
+      rgba(68, 36, 107, 0.7511379551820728) 67%,
+      rgba(97, 51, 153, 0.24693627450980393) 89%,
+      rgba(107, 56, 168, 0.4374124649859944) 100%
+    );
+  }
+}
+
+#banner > * {
+  position: relative;
+  z-index: 1;
 }
 
 /*------------------------------------------------------------------------------------------*/
