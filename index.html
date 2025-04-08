@@ -136,13 +136,13 @@
             </div>
 
             <!--Call to Action-->
-            <a href="#registrar" class="button">Registrar mi cupo gratuito</a>
+            <a href="#vip" class="button">Registrar mi cupo gratuito</a>
             <p style="color: white; margin-top: 10px; font-weight: bold">¡Espacios limitados!</p>
             <!--End Call to Action-->
           </div>
 
           <!-- Video de Angie Principal -->
-          <div class="video-container" style="margin-top: 20px">
+          <div class="video-container">
             <video controls src="./images/VideoMexico.mp4"></video>
           </div>
 
@@ -269,46 +269,25 @@
           data-featherlight-filter="a"
         >
           <a
-            href="images/gallery-images/evento-1.jpg"
+            href="images/gallery-images/gallery-image-1.jpeg"
             data-featherlight="image"
             class="col-3 wow fadeIn"
             data-wow-delay="0.1s"
-            ><img src="images/gallery-images/evento-1.jpg" alt="Evento Armonía"
+            ><img src="images/gallery-images/gallery-image-1.jpeg" alt="Evento Armonía"
           /></a>
           <a
-            href="images/gallery-images/evento-2.jpg"
+            href="images/gallery-images/gallery-image-2.jpeg"
             data-featherlight="image"
             class="col-3 wow fadeIn"
             data-wow-delay="0.3s"
-            ><img src="images/gallery-images/evento-2.jpg" alt="Evento Armonía"
+            ><img src="images/gallery-images/gallery-image-2.jpeg" alt="Evento Armonía"
           /></a>
           <a
-            href="images/gallery-images/evento-3.jpg"
+            href="images/gallery-images/gallery-image-3.jpeg"
             data-featherlight="image"
             class="col-3 wow fadeIn"
             data-wow-delay="0.5s"
-            ><img src="images/gallery-images/evento-3.jpg" alt="Evento Armonía"
-          /></a>
-          <a
-            href="images/gallery-images/evento-4.jpg"
-            data-featherlight="image"
-            class="col-3 wow fadeIn"
-            data-wow-delay="1.1s"
-            ><img src="images/gallery-images/evento-4.jpg" alt="Evento Armonía"
-          /></a>
-          <a
-            href="images/gallery-images/evento-5.jpg"
-            data-featherlight="image"
-            class="col-3 wow fadeIn"
-            data-wow-delay="0.9s"
-            ><img src="images/gallery-images/evento-5.jpg" alt="Evento Armonía"
-          /></a>
-          <a
-            href="images/gallery-images/evento-6.jpg"
-            data-featherlight="image"
-            class="col-3 wow fadeIn"
-            data-wow-delay="0.7s"
-            ><img src="images/gallery-images/evento-6.jpg" alt="Evento Armonía"
+            ><img src="images/gallery-images/gallery-image-3.jpeg" alt="Evento Armonía"
           /></a>
         </aside>
         <!--End of Gallery-->
@@ -321,126 +300,162 @@
               <h2 class="section-title">Experiencia VIP & Reserva tu lugar</h2>
             </div>
 
-            <!--Pricing Block-->
-            <div
-              class="pricing-block featured col-2 wow fadeInUp"
-              data-wow-delay="0.6s"
-              style="float: none; margin: 0 auto"
-            >
-              <div class="pricing-block-content">
-                <h3>Experiencia VIP</h3>
-                <p class="pricing-sub">Eleva tu experiencia</p>
-                <div class="pricing">
-                  <div class="price"><span>$</span>300 MX</div>
-                  <p><del>$800 MX</del> - 62% de descuento</p>
-                </div>
-                <ul>
-                  <li>Acceso a la zona VIP</li>
-                  <li>Conexiones poderosas con invitados especiales</li>
-                  <li>Preguntas y respuestas con los expertos</li>
-                  <li>20% de descuento en el Retiro de Armonía 2025</li>
-                  <li>Recursos exclusivos para tu desarrollo</li>
-                </ul>
-                <a href="#" class="button">RESERVAR AHORA</a>
-                <div style="margin-top: 20px">
-                  <p id="countdown" style="font-weight: bold">Oferta finaliza en: 00:00:00</p>
+            <div class="pricing-container">
+              <!--Pricing Block-->
+              <div
+                class="pricing-block featured col-2 wow fadeInUp"
+                data-wow-delay="0.6s"
+                style="float: none; margin: 0 auto"
+              >
+                <div class="pricing-block-content">
+                  <h3>Experiencia VIP</h3>
+                  <p class="pricing-sub">Eleva tu experiencia</p>
+                  <div class="pricing">
+                    <div class="price"><span>$</span>300 MX</div>
+                    <p><del>$800 MX</del> - 62% de descuento</p>
+                  </div>
+                  <ul>
+                    <li>Acceso a la zona VIP</li>
+                    <li>Conexiones poderosas con invitados especiales</li>
+                    <li>Preguntas y respuestas con los expertos</li>
+                    <li>20% de descuento en el Retiro de Armonía 2025</li>
+                    <li>Recursos exclusivos para tu desarrollo</li>
+                  </ul>
+                  <div id="countdown-container">
+                    <p id="countdown">Oferta finaliza en: 00:00:00</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!--End Pricing Block-->
+              <!--End Pricing Block-->
 
-            <!--Registration Form-->
-            <div class="col-2 wow fadeInUp" data-wow-delay="0.2s" style="float: none; margin: 20px auto">
-              <div style="background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 5px">
-                <h3 style="margin-bottom: 20px">Reserva tu lugar ahora</h3>
-                <form id="registration-form" action="#" method="post">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Tu nombre completo"
-                    required
-                    style="width: 100%; margin-bottom: 15px"
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Tu correo electrónico"
-                    required
-                    style="width: 100%; margin-bottom: 15px"
-                  />
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Tu número de teléfono"
-                    style="width: 100%; margin-bottom: 15px"
-                  />
-                  <button type="submit" class="button">REGISTRAR MI CUPO GRATUITO</button>
-                  <p style="margin-top: 10px">¡Espacios limitados! Asegura tu lugar ahora.</p>
-                </form>
+              <!--Registration Form-->
+              <div class="col-2 wow fadeInUp" data-wow-delay="0.2s" style="float: none; margin: 20px auto">
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 5px">
+                  <h3 style="margin-bottom: 20px">Reserva tu lugar ahora</h3>
+                  <!-- Formulario para ambos tipos de registro -->
+                  <form id="registration-form">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Tu nombre completo"
+                      required
+                      style="width: 100%; margin-bottom: 15px"
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Tu correo electrónico"
+                      required
+                      style="width: 100%; margin-bottom: 15px"
+                    />
+                    <input
+                      type="text"
+                      name="doc"
+                      placeholder="Tu numero de documento (INE, pasaporte, etc.)"
+                      required
+                      style="width: 100%; margin-bottom: 15px"
+                    />
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Tu número de teléfono"
+                      required
+                      style="width: 100%; margin-bottom: 15px"
+                    />
+                    <!-- Contenedor para los botones -->
+                    <div
+                      class="button-container"
+                      style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px"
+                    >
+                      <!-- Botón para registro gratuito -->
+                      <button type="button" onclick="sendWhatsAppMessage(event, false)" class="button normal-button">
+                        REGISTRAR MI CUPO GRATUITO
+                      </button>
+
+                      <!-- Botón para experiencia VIP más llamativo -->
+                      <button
+                        type="button"
+                        onclick="sendWhatsAppMessage(event, true)"
+                        class="button vip-button"
+                        style="
+                          background: var(--gradiente-dorado);
+                          transform: scale(1.05);
+                          padding: 15px;
+                          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                        "
+                      >
+                        <i class="fa fa-star" style="margin-right: 8px"></i> OBTENER EXPERIENCIA VIP
+                      </button>
+                    </div>
+                    <p style="margin-top: 15px">¡Espacios limitados! Asegura tu lugar ahora.</p>
+                  </form>
+                </div>
               </div>
+              <!--End Registration Form-->
             </div>
-            <!--End Registration Form-->
           </div>
         </section>
         <!--End of VIP Experience & Registration Section-->
 
-        <!--Testimonials-->
-        <aside id="testimonios" class="scrollto text-center" data-enllax-ratio=".2">
+        <!--Testimonios en Video-->
+        <section id="testimonios-video" class="scrollto clearfix">
           <div class="row clearfix">
-            <div class="section-heading">
-              <h3>TESTIMONIOS</h3>
-              <h2 class="section-title">Lo que dicen nuestros participantes</h2>
-            </div>
-
-            <!-- Videos Testimoniales -->
-            <div class="col-2" style="margin: 0 auto; float: none">
-              <div class="video-testimonial" style="margin-bottom: 30px">
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/VIDEO_ID_1"
-                  frameborder="0"
-                  allowfullscreen
-                ></iframe>
+            <div class="col-3">
+              <div class="section-heading">
+                <h3>EXPERIENCIAS</h3>
+                <h2 class="section-title">Testimonios en video</h2>
+                <p class="section-subtitle">
+                  Escucha las experiencias transformadoras de quienes ya han vivido la magia de Armonía.
+                </p>
               </div>
-              <div class="video-testimonial">
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/VIDEO_ID_2"
-                  frameborder="0"
-                  allowfullscreen
-                ></iframe>
+
+              <!-- Ilustración decorativa -->
+              <div class="illustration">
+                <img src="images/company-images/Muñeca_2.png" alt="Ilustración testimonio" />
               </div>
             </div>
 
-            <!-- Testimonios en texto como respaldo -->
-            <div class="testimonial-wrapper" style="margin-top: 40px">
-              <!--User Testimonial-->
-              <blockquote class="col-3 testimonial classic">
-                <img src="images/user-images/user-1.jpg" alt="Usuario" />
-                <q
-                  >La experiencia con Armonía transformó completamente mi perspectiva. Ahora tengo herramientas claras
-                  para manifestar mis objetivos y conectar con mi poder interior.</q
-                >
-                <footer>María López - Participante Satisfecha</footer>
-              </blockquote>
-              <!-- End of Testimonial-->
+            <div class="col-2-3">
+              <div class="testimonios-grid">
+                <!-- Video Testimonio 1 -->
+                <div class="video-testimonio wow fadeInUp" data-wow-delay="0.1s">
+                  <div class="video-container vertical">
+                    <video controls>
+                      <source src="/images/testimonio.mp4" type="video/mp4" />
+                      Tu navegador no soporta videos HTML5.
+                    </video>
+                  </div>
+                </div>
 
-              <!--User Testimonial-->
-              <blockquote class="col-3 testimonial classic">
-                <img src="images/user-images/user-2.jpg" alt="Usuario" />
-                <q
-                  >Increíble cómo en tan poco tiempo pude reprogramar mi mente y dejar atrás limitaciones. El apoyo del
-                  grupo y las enseñanzas de los mentores fueron excepcionales.</q
-                >
-                <footer>Carlos Rodríguez - Participante Satisfecho</footer>
-              </blockquote>
-              <!-- End of Testimonial-->
+                <!-- Video Testimonio 2 -->
+                <div class="video-testimonio wow fadeInUp" data-wow-delay="0.3s">
+                  <div class="video-container vertical">
+                    <video controls>
+                      <source src="/images/Testimonio2.mp4" type="video/mp4" />
+                      Tu navegador no soporta videos HTML5.
+                    </video>
+                  </div>
+                </div>
+
+                <!-- Video Testimonio 3 -->
+                <div class="video-testimonio wow fadeInUp" data-wow-delay="0.5s">
+                  <div class="video-container vertical">
+                    <video controls>
+                      <source src="/images/testimonio3.MP4" type="video/mp4" />
+                      Tu navegador no soporta videos HTML5.
+                    </video>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </aside>
-        <!--End of Testimonials-->
+
+          <!-- CTA después de los testimonios -->
+          <div class="clearfix text-center">
+            <a href="#registrar" class="button">QUIERO VIVIR ESTA EXPERIENCIA</a>
+          </div>
+        </section>
+        <!--End of Testimonios en Video-->
 
         <!--Meditaciones Section-->
         <section id="meditaciones" class="scrollto clearfix">
@@ -464,19 +479,6 @@
                 <div class="icon-block-description">
                   <h4>Meditación para conectar con tu poder</h4>
                   <p>Una práctica guiada para ayudarte a reconocer y activar tu poder interior.</p>
-                  <a href="https://open.spotify.com/show/773MuOVhDfJZ2Yu4W2cawW" target="_blank" class="button"
-                    >Escuchar en Spotify</a
-                  >
-                </div>
-              </div>
-
-              <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.3s">
-                <div class="icon">
-                  <i class="fa fa-spotify fa-4x"></i>
-                </div>
-                <div class="icon-block-description">
-                  <h4>Meditación para manifestar</h4>
-                  <p>Aprende a usar el poder de tu mente para atraer lo que deseas a tu vida.</p>
                   <a href="https://open.spotify.com/show/773MuOVhDfJZ2Yu4W2cawW" target="_blank" class="button"
                     >Escuchar en Spotify</a
                   >
@@ -564,6 +566,86 @@
         if (distance < 0) {
           clearInterval(x);
           document.getElementById("countdown").innerHTML = "¡OFERTA EXPIRADA!";
+        }
+      }, 1000);
+    </script>
+
+    <script>
+      // Script para enviar mensajes a WhatsApp
+      function sendWhatsAppMessage(event, isVIP) {
+        event.preventDefault();
+
+        // Información de contacto del organizador
+        const phoneNumber = "573224198413"; // Usa tu número real aquí
+
+        // Obtener datos del formulario
+        const form = document.getElementById("registration-form");
+        const name = form.elements["name"].value;
+        const email = form.elements["email"].value;
+        const doc = form.elements["doc"].value;
+        const phone = form.elements["phone"].value;
+
+        // Validar que se hayan llenado los campos
+        if (!name || !email || !phone || !doc) {
+          alert("Por favor, completa todos los campos del formulario.");
+          return;
+        }
+
+        let message = "";
+
+        if (isVIP) {
+          message = `Hola, quiero reservar mi EXPERIENCIA VIP para el evento Armonía.%0A%0A`;
+          message += `Nombre: ${name}%0A`;
+          message += `Email: ${email}%0A`;
+          message += `Número de documento: ${doc}%0A`;
+          message += `Teléfono: ${phone}%0A`;
+          message += `Tipo de reserva: *VIP*%0A`;
+          message += `Monto a pagar: $300 MX`;
+        } else {
+          message = `Hola, quiero registrarme para el evento Armonía.%0A%0A`;
+          message += `Nombre: ${name}%0A`;
+          message += `Email: ${email}%0A`;
+          message += `Número de documento: ${doc}%0A`;
+          message += `Teléfono: ${phone}%0A`;
+          message += `Tipo de registro: *Gratuito*`;
+        }
+
+        // Construir URL de WhatsApp
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+        // Abrir WhatsApp en una nueva ventana
+        window.open(whatsappURL, "_blank");
+      }
+      // Contador mejorado
+      var countDownDate = new Date();
+      countDownDate.setDate(countDownDate.getDate() + 1);
+
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+          "Oferta finaliza en: " +
+          (hours < 10 ? "0" + hours : hours) +
+          ":" +
+          (minutes < 10 ? "0" + minutes : minutes) +
+          ":" +
+          (seconds < 10 ? "0" + seconds : seconds);
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "¡OFERTA EXPIRADA!";
+          // Ocultar botón o tomar otra acción cuando expire
+          var vipButton = document.querySelector("#vip .pricing-block .button");
+          if (vipButton) {
+            vipButton.style.opacity = "0.5";
+            vipButton.style.pointerEvents = "none";
+            vipButton.textContent = "OFERTA EXPIRADA";
+          }
         }
       }, 1000);
     </script>

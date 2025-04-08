@@ -156,7 +156,7 @@ a:hover,
 .primary-color .section-subtitle,
 .featured .pricing,
 .featured .pricing p {
-  color: #fff;
+  color: #2b2a2a;
 }
 
 .section-heading h2:after {
@@ -193,9 +193,11 @@ a:hover,
 
 #banner {
   position: relative;
-  background: url("../images/banner-images/young-woman-standing-universe-texture-projection.jpg") no-repeat center top;
+  background: url("../images/banner-images/banner.jpeg");
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100%;
 }
 
 #banner:before {
@@ -296,7 +298,6 @@ body {
   font-family: "Open Sans", sans-serif, Arial, Helvetica;
   font-size: 34px;
   font-weight: 700;
-  color: var(--gris-300);
 }
 
 .section-subtitle {

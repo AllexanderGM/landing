@@ -412,6 +412,7 @@ section {
 /*Style*/
 
 .button {
+  cursor: pointer;
   font-size: 16px;
   margin: 35px 0;
   padding: 11px 16px;
@@ -721,6 +722,10 @@ nav#nav-mobile a:hover {
   margin-top: 27px;
 }
 
+.nav-collapse.sticky.fadeIn.animated.nav-solid.fadeInDown {
+  display: none;
+}
+
 .nav-collapse.sticky.fadeIn.animated.nav-solid.fadeInDown a {
   margin-left: 0;
   margin-right: 20px;
@@ -824,6 +829,7 @@ h6 {
 #banner {
   position: relative;
   background-size: cover;
+  overflow: hidden;
 }
 
 #banner-content.row {
@@ -858,6 +864,7 @@ h6 {
   height: auto;
   border-radius: 25px;
   overflow: hidden;
+  border: 1px solid var(--dorado-claro);
 }
 
 #banner .illustration {
@@ -874,9 +881,19 @@ h6 {
   }
 
   #banner .video-container {
-    width: 50%;
+    width: 100%;
     max-width: 100%;
-    padding: 40px;
+    padding: 0 40px;
+    margin: 0;
+    margin-bottom: 60px;
+  }
+
+  #banner .illustration {
+    position: absolute;
+    right: -12px;
+    bottom: 240px;
+    max-width: 140px;
+    transform: scaleX(-1) rotate(8deg);
   }
 }
 
@@ -1515,13 +1532,21 @@ blockquote {
 
 /* --------- 6.7 Pricing Table ---------- */
 
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #292828;
+}
+
 .pricing-block-content {
   background: #fff;
   padding: 25px 0 25px 0;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
   transition: all 0.2s ease-in-out 0s;
   position: relative;
-  border: 10px solid #fff;
+  border: 4px solid var(--gris-400);
 }
 
 .pricing-block ul {
@@ -1539,6 +1564,7 @@ blockquote {
 }
 
 .pricing-block h3 {
+  color: var(--morado-medio);
   font-size: 17px;
   text-transform: uppercase;
   padding-bottom: 0;
@@ -1546,7 +1572,7 @@ blockquote {
 
 .pricing-sub {
   font-style: italic;
-  color: #ccc;
+  color: #2b2929;
   margin: 0 0 25px 0;
 }
 
@@ -1627,7 +1653,7 @@ blockquote {
 }
 
 #scrollUp:before {
-  background: #ccc;
+  background: #3b3b3b;
   font-family: "fontawesome";
   font-size: 2.4em;
   font-style: normal;
@@ -2467,5 +2493,385 @@ blockquote {
   .slvj-lightbox object,
   .slvj-lightbox embed {
     height: 432px !important;
+  }
+}
+
+/* Estilos específicos para la sección VIP */
+#vip {
+  background: var(--gradiente-morado);
+  color: var(--gris-100);
+}
+
+#vip .section-heading h3 {
+  color: var(--dorado-claro);
+}
+
+#vip .section-heading h2 {
+  color: var(--gris-100);
+}
+
+#vip .pricing-block-content {
+  background: rgba(255, 255, 255, 0.1);
+  border: 4px solid var(--dorado-claro);
+  color: var(--gris-100);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#vip .pricing-block h3 {
+  color: var(--dorado-intenso);
+}
+
+#vip .pricing-sub {
+  color: var(--gris-200);
+}
+
+#vip .pricing {
+  background: rgba(53, 19, 90, 0.6);
+}
+
+#vip .price {
+  color: var(--dorado-intenso);
+}
+
+#vip .pricing p {
+  color: var(--gris-300);
+}
+
+#vip .pricing-block li {
+  border-bottom: 1px dotted var(--gris-600);
+  color: var(--gris-200);
+}
+
+#vip .button {
+  margin: 10px;
+  background: var(--gradiente-dorado);
+  color: var(--gris-900);
+  border-color: var(--dorado-intenso);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#vip .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#vip #countdown {
+  color: var(--dorado-claro);
+}
+
+/* Formulario de registro */
+#vip #registration-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 5px;
+  border: 2px solid var(--lavanda-suave);
+}
+
+#vip #registration-form h3 {
+  color: var(--dorado-claro);
+  margin-bottom: 20px;
+}
+
+#vip #registration-form input {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--gris-600);
+  color: var(--gris-100);
+}
+
+#vip #registration-form input::placeholder {
+  color: var(--gris-400);
+}
+
+#vip #registration-form input:focus {
+  border-color: var(--dorado-claro);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+#vip #registration-form button {
+  background: var(--gradiente-dorado);
+  color: var(--gris-900);
+  border-color: var(--dorado-intenso);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#vip #registration-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#vip #registration-form p {
+  color: var(--gris-300);
+  margin-top: 10px;
+}
+
+/* Estilos específicos para la sección VIP con contador destacado */
+#vip {
+  background: var(--gradiente-morado);
+  color: var(--gris-100);
+}
+
+#vip .section-heading h3 {
+  color: var(--dorado-claro);
+}
+
+#vip .section-heading h2 {
+  color: var(--gris-100);
+}
+
+#vip .pricing-block-content {
+  background: rgba(255, 255, 255, 0.1);
+  border: 4px solid var(--dorado-claro);
+  color: var(--gris-100);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#vip .pricing-block h3 {
+  color: var(--dorado-intenso);
+}
+
+#vip .pricing-sub {
+  color: var(--gris-200);
+}
+
+#vip .pricing {
+  background: rgba(53, 19, 90, 0.6);
+}
+
+#vip .price {
+  color: var(--dorado-intenso);
+}
+
+#vip .pricing p {
+  color: var(--gris-300);
+}
+
+#vip .pricing-block li {
+  border-bottom: 1px dotted var(--gris-600);
+  color: var(--gris-200);
+}
+
+#vip .button {
+  background: var(--gradiente-dorado);
+  color: var(--gris-900);
+  border-color: var(--dorado-intenso);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#vip .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Contador destacado */
+#vip #countdown-container {
+  margin-top: 25px;
+  padding: 15px;
+  background: var(--gradiente-dorado);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: pulse 2s infinite;
+}
+
+#vip #countdown {
+  color: var(--gris-900);
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Formulario de registro */
+#vip #registration-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 5px;
+  border: 2px solid var(--lavanda-suave);
+}
+
+#vip #registration-form h3 {
+  color: var(--dorado-claro);
+  margin-bottom: 20px;
+}
+
+#vip #registration-form input {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--gris-600);
+  color: var(--gris-100);
+}
+
+#vip #registration-form input::placeholder {
+  color: var(--gris-400);
+}
+
+#vip #registration-form input:focus {
+  border-color: var(--dorado-claro);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+#vip #registration-form button {
+  background: var(--gradiente-dorado);
+  color: var(--gris-900);
+  border-color: var(--dorado-intenso);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#vip #registration-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#vip #registration-form p {
+  color: var(--gris-300);
+  margin-top: 10px;
+}
+
+/* Estilos para sección de testimonios en video */
+#testimonios-video {
+  background: var(--gradiente-morado);
+  position: relative;
+  padding: 50px 0;
+  color: var(--gris-100);
+}
+
+#testimonios-video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/banner-images/pattern-overlay.png");
+  opacity: 0.05;
+  z-index: 0;
+}
+
+#testimonios-video .row {
+  position: relative;
+  z-index: 1;
+}
+
+#testimonios-video .section-heading h3 {
+  color: var(--dorado-claro);
+}
+
+#testimonios-video .section-title {
+  color: var(--gris-100);
+}
+
+#testimonios-video .section-subtitle {
+  color: var(--gris-300);
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.video-testimonio {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(241, 215, 141, 0.2);
+}
+
+.video-testimonio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-container.vertical {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9/16; /* Formato vertical para móviles */
+  overflow: hidden;
+  background: #000;
+  border-radius: 10px;
+}
+
+.video-container.vertical video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#testimonios-video .button {
+  background: var(--gradiente-dorado);
+  color: var(--gris-900);
+  border-color: var(--dorado-intenso);
+  margin-top: 40px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 12px 25px;
+}
+
+#testimonios-video .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .testimonios-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .testimonios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .col-2-3 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .testimonios-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonios-grid {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 280px;
+    margin: 20px auto 0;
+  }
+
+  #testimonios-video .section-title {
+    font-size: 28px;
+  }
+
+  .video-container.vertical {
+    max-width: 280px;
+    margin: 0 auto;
   }
 }
