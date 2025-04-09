@@ -389,6 +389,8 @@ section {
   max-height: 52px;
   vertical-align: middle;
   margin-right: 15px;
+  position: relative;
+  left: -23px;
 }
 
 #navigation-logo {
@@ -890,10 +892,10 @@ h6 {
 
   #banner .illustration {
     position: absolute;
-    right: -12px;
+    right: -14px;
     bottom: 240px;
     max-width: 140px;
-    transform: scaleX(-1) rotate(8deg);
+    transform: scaleX(-1) rotate(16deg);
   }
 }
 
@@ -2947,7 +2949,6 @@ blockquote {
 #testimonios-video {
   background: var(--gradiente-morado);
   position: relative;
-  padding: 50px 0;
   color: var(--gris-100);
 }
 
