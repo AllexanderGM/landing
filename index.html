@@ -269,11 +269,11 @@
           data-featherlight-filter="a"
         >
           <a
-            href="images/gallery-images/gallery-image-1.jpeg"
+            href="images/gallery-images/gallery-image-1.jpg"
             data-featherlight="image"
             class="col-3 wow fadeIn"
             data-wow-delay="0.1s"
-            ><img src="images/gallery-images/gallery-image-1.jpeg" alt="Evento Armonía"
+            ><img src="images/gallery-images/gallery-image-1.jpg" alt="Evento Armonía"
           /></a>
           <a
             href="images/gallery-images/gallery-image-2.jpeg"
@@ -283,21 +283,25 @@
             ><img src="images/gallery-images/gallery-image-2.jpeg" alt="Evento Armonía"
           /></a>
           <a
-            href="images/gallery-images/gallery-image-3.jpeg"
+            href="images/gallery-images/gallery-image-2.jpg"
             data-featherlight="image"
             class="col-3 wow fadeIn"
             data-wow-delay="0.5s"
-            ><img src="images/gallery-images/gallery-image-3.jpeg" alt="Evento Armonía"
+            ><img src="images/gallery-images/gallery-image-2.jpg" alt="Evento Armonía"
           /></a>
         </aside>
         <!--End of Gallery-->
 
         <!--VIP Experience & Registration Combined Section-->
         <section id="vip" class="secondary-color text-center scrollto clearfix">
-          <div class="row clearfix">
+          <div class="premium-background">
+            <div class="premium-particles"></div>
             <div class="section-heading">
               <h3>EXPERIENCIA EXCLUSIVA</h3>
-              <h2 class="section-title">Experiencia VIP & Reserva tu lugar</h2>
+              <h2 class="section-title">
+                <span class="premium-star"><i class="fa fa-star"></i></span> Experiencia VIP
+                <span class="premium-star"><i class="fa fa-star"></i></span>
+              </h2>
             </div>
 
             <div class="pricing-container">
@@ -307,7 +311,8 @@
                 data-wow-delay="0.6s"
                 style="float: none; margin: 0 auto"
               >
-                <div class="pricing-block-content">
+                <div class="pricing-block-content premium-card">
+                  <div class="premium-ribbon"><span>Exclusivo</span></div>
                   <h3>Experiencia VIP</h3>
                   <p class="pricing-sub">Eleva tu experiencia</p>
                   <div class="pricing">
@@ -315,13 +320,13 @@
                     <p><del>$800 MX</del> - 62% de descuento</p>
                   </div>
                   <ul>
-                    <li>Acceso a la zona VIP</li>
-                    <li>Conexiones poderosas con invitados especiales</li>
-                    <li>Preguntas y respuestas con los expertos</li>
-                    <li>20% de descuento en el Retiro de Armonía 2025</li>
-                    <li>Recursos exclusivos para tu desarrollo</li>
+                    <li><i class="fa fa-gem premium-icon"></i> Acceso a la zona VIP</li>
+                    <li><i class="fa fa-users premium-icon"></i> Conexiones poderosas con invitados especiales</li>
+                    <li><i class="fa fa-comments premium-icon"></i> Preguntas y respuestas con los expertos</li>
+                    <li><i class="fa fa-percent premium-icon"></i> 20% de descuento en el Retiro de Armonía 2025</li>
+                    <li><i class="fa fa-gift premium-icon"></i> Recursos exclusivos para tu desarrollo</li>
                   </ul>
-                  <div id="countdown-container">
+                  <div id="countdown-container" class="premium-countdown">
                     <p id="countdown">Oferta finaliza en: 00:00:00</p>
                   </div>
                 </div>
@@ -393,6 +398,13 @@
               </div>
               <!--End Registration Form-->
             </div>
+          </div>
+
+          <div id="particles-js"></div>
+
+          <!-- Columna derecha: Ilustración -->
+          <div class="meditation-illustration" style="width: 500px;">
+            <img src="images/ticket.JPG" alt="Meditación y relajación" />
           </div>
         </section>
         <!--End of VIP Experience & Registration Section-->
@@ -467,16 +479,24 @@
             </div>
 
             <div class="col-2-3">
-              <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
-                <div class="icon">
-                  <i class="fa fa-spotify fa-4x"></i>
+              <div class="meditation-container">
+                <!-- Columna izquierda: Spotify -->
+                <div class="meditation-info">
+                  <div class="icon">
+                    <i class="fa fa-spotify fa-4x"></i>
+                  </div>
+                  <div class="icon-block-description">
+                    <h4>Meditación para conectar con tu poder</h4>
+                    <p>Una práctica guiada para ayudarte a reconocer y activar tu poder interior.</p>
+                    <a href="https://open.spotify.com/show/773MuOVhDfJZ2Yu4W2cawW" target="_blank" class="button"
+                      >Escuchar en Spotify</a
+                    >
+                  </div>
                 </div>
-                <div class="icon-block-description">
-                  <h4>Meditación para conectar con tu poder</h4>
-                  <p>Una práctica guiada para ayudarte a reconocer y activar tu poder interior.</p>
-                  <a href="https://open.spotify.com/show/773MuOVhDfJZ2Yu4W2cawW" target="_blank" class="button"
-                    >Escuchar en Spotify</a
-                  >
+
+                <!-- Columna derecha: Ilustración -->
+                <div class="meditation-illustration">
+                  <img src="images/spotify.PNG" alt="Meditación y relajación" />
                 </div>
               </div>
             </div>
@@ -528,6 +548,7 @@
     <script src="js/images-loaded.min.js"></script>
     <script src="js/lightbox.min.js"></script>
     <script src="js/site.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <!-- Countdown Script -->
     <script>
@@ -643,6 +664,119 @@
           }
         }
       }, 1000);
+    </script>
+
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 120,
+            density: {
+              enable: true,
+              value_area: 900,
+            },
+          },
+          color: {
+            value: ["#d4af37", "#f5d773", "#e6c045", "#ffdf70"],
+          },
+          shape: {
+            type: "circle", // Simplificado a un solo tipo para evitar problemas
+            stroke: {
+              width: 0,
+              color: "#f1d78d",
+            },
+            polygon: {
+              nb_sides: 6,
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: 0.6,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 0.4,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 4,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 0.4,
+              size_min: 0.5,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: false, // Desactivado para evitar el error
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 0.8,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out", // Cambiado a "out" para evitar problemas con "bounce"
+            bounce: false,
+            attract: {
+              enable: false, // Desactivado para simplificar
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "bubble", // Volvemos a "bubble" que funcionaba en tu configuración original
+            },
+            onclick: {
+              enable: true,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 400,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 150,
+              size: 6,
+              duration: 2,
+              opacity: 0.8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 150,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 6,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
     </script>
   </body>
 </html>

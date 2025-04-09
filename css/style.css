@@ -2744,6 +2744,205 @@ blockquote {
   margin-top: 10px;
 }
 
+/* Estilos premium para la sección VIP */
+.premium-background {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+  max-width: 1240px;
+  margin: auto;
+}
+
+#vip {
+  position: relative;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#registration-form {
+  position: relative;
+  z-index: 20;
+}
+
+/* Partículas sutiles de brillo */
+.premium-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 25% 15%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 75% 35%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 85% 65%, rgba(255, 255, 255, 0.05) 2px, transparent 2px),
+    radial-gradient(circle at 25% 85%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 65% 75%, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+/* Tarjeta premium con borde dorado sutil */
+.premium-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.15);
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(212, 175, 55, 0.2), 0 0 20px rgba(212, 175, 55, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  transform: translateZ(0);
+}
+
+.premium-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: linear-gradient(45deg, var(--dorado-intenso), transparent 40%, transparent 60%, var(--dorado-intenso));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Estrella elegante */
+.premium-star {
+  display: inline-block;
+  position: relative;
+  color: var(--dorado-intenso);
+  margin-left: 8px;
+  transform: translateY(-2px);
+}
+
+.premium-star i {
+  font-size: 22px;
+}
+
+.premium-star::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  left: -25%;
+  top: -25%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Iconos premium en lista */
+.premium-icon {
+  color: var(--dorado-claro);
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+/* Cinta premium */
+.premium-ribbon {
+  position: absolute;
+  right: -5px;
+  top: 0px;
+  z-index: 1;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  text-align: right;
+}
+
+.premium-ribbon span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 28px;
+  transform: rotate(45deg);
+  width: 150px;
+  display: block;
+  background: linear-gradient(to right, var(--dorado-claro), var(--dorado-intenso), var(--dorado-claro));
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 20px;
+  right: -35px;
+}
+
+.premium-ribbon span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid var(--dorado-intenso);
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid var(--dorado-intenso);
+}
+
+.premium-ribbon span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid var(--dorado-intenso);
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid var(--dorado-intenso);
+}
+
+/* Contador premium */
+.premium-countdown {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(53, 19, 90, 0.5));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-countdown::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(transparent, transparent, transparent, rgba(255, 255, 255, 0.1));
+  transform: rotate(45deg);
+  animation: premium-shine 4s linear infinite;
+}
+
+@keyframes premium-shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+/* Formulario premium */
+.premium-form {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(5px);
+  transform: translateZ(0);
+}
+
 /* Estilos para sección de testimonios en video */
 #testimonios-video {
   background: var(--gradiente-morado);
@@ -2861,5 +3060,47 @@ blockquote {
   .video-container.vertical {
     max-width: 280px;
     margin: 0 auto;
+  }
+}
+
+/* Estilos para la sección de meditaciones */
+.meditation-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.meditation-info {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.meditation-illustration {
+  flex: 1;
+  text-align: center;
+}
+
+.meditation-illustration img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  border: 2px solid var(--dorado-claro);
+}
+
+.meditation-illustration img:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .meditation-container {
+    flex-direction: column;
+  }
+
+  .meditation-info {
+    padding-right: 0;
+    margin-bottom: 30px;
   }
 }
