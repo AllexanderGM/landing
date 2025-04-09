@@ -218,7 +218,7 @@ section {
 .row {
   max-width: 1245px;
   margin: 0 auto;
-  padding: 75px 0;
+  padding: 50px 0;
   position: relative;
 }
 
@@ -1081,6 +1081,10 @@ blockquote {
 
 /* --------- 6.4 Gallery ---------- */
 
+#gallery {
+  z-index: 15;
+}
+
 #gallery img {
   max-height: 300px;
 }
@@ -1541,6 +1545,10 @@ blockquote {
   align-items: center;
   justify-content: center;
   color: #292828;
+}
+
+.pricing-container .col-2.wow.fadeInUp {
+  z-index: 15;
 }
 
 .pricing-block-content {
@@ -2501,7 +2509,6 @@ blockquote {
 
 /* Estilos específicos para la sección VIP */
 #vip {
-  background: var(--gradiente-morado);
   color: var(--gris-100);
 }
 
@@ -2611,7 +2618,6 @@ blockquote {
 
 /* Estilos específicos para la sección VIP con contador destacado */
 #vip {
-  background: var(--gradiente-morado);
   color: var(--gris-100);
 }
 
@@ -2948,7 +2954,6 @@ blockquote {
 
 /* Estilos para sección de testimonios en video */
 #testimonios-video {
-  background: var(--gradiente-morado);
   position: relative;
   color: var(--gris-100);
 }
