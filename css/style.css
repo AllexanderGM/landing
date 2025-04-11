@@ -3111,3 +3111,479 @@ blockquote {
     margin-bottom: 30px;
   }
 }
+
+/* Estilos comunes para formularios */
+#registro-gratuito input,
+#vip input {
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--gris-600);
+  color: var(--gris-100);
+}
+
+#registro-gratuito input::placeholder,
+#vip input::placeholder {
+  color: var(--gris-400);
+}
+
+#registro-gratuito input:focus,
+#vip input:focus {
+  border-color: var(--dorado-claro);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.form-note {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Estilos para la sección de registro gratuito */
+#registro-gratuito {
+  position: relative;
+  z-index: 10;
+}
+
+#registro-gratuito .section-heading h3 {
+  color: var(--dorado-claro);
+}
+
+#registro-gratuito .section-title {
+  color: var(--gris-100);
+}
+
+#registro-gratuito .section-subtitle {
+  color: var(--gris-300);
+}
+
+.form-container {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(241, 215, 141, 0.1);
+}
+
+.form-image-container {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.form-ilustration {
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.form-content {
+  flex: 0 0 70%;
+  padding: 30px;
+}
+
+#registro-gratuito-form {
+  max-width: 100%;
+}
+
+#registro-gratuito .button {
+  background: var(--gradiente-dorado);
+  color: var(--gris-900);
+  border-color: var(--dorado-intenso);
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 12px 25px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#registro-gratuito .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos base para la sección VIP */
+#vip {
+  position: relative;
+  color: var(--gris-100);
+}
+
+#vip .section-heading h3 {
+  color: var(--dorado-claro);
+}
+
+#vip .section-heading h2 {
+  color: var(--gris-100);
+}
+
+/* Contenedor principal para la sección VIP */
+.vip-container {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.vip-info-block,
+.vip-form-block {
+  flex: 1;
+}
+
+/* Tarjeta Premium - Estilos comunes */
+.premium-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(53, 19, 90, 0.4);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(5px);
+  transform: translateZ(0);
+  padding: 30px 25px;
+}
+
+/* Borde dorado para tarjeta premium */
+.premium-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: linear-gradient(45deg, var(--dorado-intenso), transparent 40%, transparent 60%, var(--dorado-intenso));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Configuración específica para tarjeta VIP */
+.vip-info-block .premium-card {
+  text-align: left;
+  height: 100%;
+}
+
+/* Encabezados de la tarjeta */
+.premium-card h3 {
+  color: var(--dorado-intenso);
+  font-size: 22px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.pricing-sub {
+  font-style: italic;
+  color: var(--gris-200);
+  margin: 0 0 20px 0;
+}
+
+/* Sección de precio */
+.pricing {
+  background: rgba(53, 19, 90, 0.6);
+  padding: 25px;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.price {
+  display: inline-block;
+  font-size: 62px;
+  font-weight: 700;
+  position: relative;
+  color: var(--dorado-intenso);
+}
+
+.price span {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  font-size: 22px;
+}
+
+.pricing p {
+  color: var(--gris-300);
+  margin: 5px 0 0 0;
+}
+
+/* Lista de características */
+.premium-card ul {
+  list-style: none;
+  margin: 25px 0;
+  padding: 0;
+  text-align: left;
+}
+
+.premium-card li {
+  padding: 14px 0;
+  border-bottom: 1px dotted var(--gris-600);
+  color: var(--gris-200);
+}
+
+.premium-card li:last-of-type {
+  border: none;
+}
+
+/* Iconos premium */
+.premium-icon {
+  color: var(--dorado-claro);
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+/* Cinta "Exclusivo" */
+.premium-ribbon {
+  position: absolute;
+  right: -5px;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  text-align: right;
+}
+
+.premium-ribbon span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 28px;
+  transform: rotate(45deg);
+  width: 150px;
+  display: block;
+  background: linear-gradient(to right, var(--dorado-claro), var(--dorado-intenso), var(--dorado-claro));
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 20px;
+  right: -35px;
+}
+
+.premium-ribbon span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid var(--dorado-intenso);
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid var(--dorado-intenso);
+}
+
+.premium-ribbon span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid var(--dorado-intenso);
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid var(--dorado-intenso);
+}
+
+/* Contador regresivo */
+#countdown-container {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(53, 19, 90, 0.5));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#countdown-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(transparent, transparent, transparent, rgba(255, 255, 255, 0.1));
+  transform: rotate(45deg);
+  animation: premium-shine 4s linear infinite;
+}
+
+@keyframes premium-shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+#countdown {
+  color: var(--dorado-claro);
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilos para estrellas decorativas */
+.premium-star {
+  display: inline-block;
+  position: relative;
+  color: var(--dorado-intenso);
+  margin: 0 8px;
+  transform: translateY(-2px);
+}
+
+.premium-star i {
+  font-size: 22px;
+}
+
+/* Estilos para el formulario */
+.form-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.form-card h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--dorado-claro);
+}
+
+#vip-form input {
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--gris-600);
+  color: var(--gris-100);
+}
+
+#vip-form input::placeholder {
+  color: var(--gris-400);
+}
+
+#vip-form input:focus {
+  border-color: var(--dorado-claro);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.vip-button {
+  background: var(--gradiente-dorado) !important;
+  color: var(--gris-900) !important;
+  border-color: var(--dorado-intenso) !important;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin: 10px 0 0 0 !important;
+  text-align: center;
+}
+
+.vip-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  color: var(--gris-900) !important;
+}
+
+.vip-button i {
+  margin-right: 8px;
+}
+
+.form-note {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+  color: var(--gris-300);
+  text-align: center;
+}
+
+/* Fondos y efectos */
+.premium-background {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+  max-width: 1240px;
+  margin: auto;
+}
+
+.premium-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 25% 15%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 75% 35%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 85% 65%, rgba(255, 255, 255, 0.05) 2px, transparent 2px),
+    radial-gradient(circle at 25% 85%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 65% 75%, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+/* Media queries para adaptación responsive */
+@media (max-width: 992px) {
+  .vip-container {
+    flex-direction: column;
+    max-width: 600px;
+    padding: 0 40px;
+  }
+
+  #countdown {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .premium-card {
+    padding: 25px 20px;
+  }
+
+  .price {
+    font-size: 50px;
+  }
+
+  .price span {
+    font-size: 18px;
+    left: -15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .premium-card {
+    padding: 20px 15px;
+  }
+
+  .vip-container {
+    padding: 0 20px;
+  }
+
+  .price {
+    font-size: 42px;
+  }
+
+  #countdown {
+    font-size: 14px;
+  }
+
+  .premium-ribbon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .premium-ribbon span {
+    font-size: 10px;
+    width: 120px;
+    line-height: 24px;
+    top: 18px;
+    right: -30px;
+  }
+}

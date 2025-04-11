@@ -56,7 +56,7 @@
     </div>
 
     <div id="wrapper">
-      <header id="banner" class="scrollto clearfix" >
+      <header id="banner" class="scrollto clearfix">
         <div id="header" class="nav-collapse">
           <div class="row clearfix">
             <div class="col-1">
@@ -140,7 +140,7 @@
             </div>
 
             <!--Call to Action-->
-            <a href="#vip" class="button">Registrar mi cupo gratuito</a>
+            <a href="#registro-gratuito" class="button">Registrar mi cupo gratuito</a>
             <p style="color: white; margin-top: 10px; font-weight: bold">¡Espacios limitados!</p>
             <!--End Call to Action-->
           </div>
@@ -296,7 +296,56 @@
         </aside>
         <!--End of Gallery-->
 
-        <!--VIP Experience & Registration Combined Section-->
+        <!--Registro Gratuito Section-->
+        <section id="registro-gratuito" class="scrollto clearfix">
+          <div class="row clearfix">
+            <div class="col-3">
+              <div class="section-heading">
+                <h3>REGISTRO</h3>
+                <h2 class="section-title">Asegura tu lugar gratuito</h2>
+                <p class="section-subtitle">
+                  Reserva hoy mismo tu cupo para vivir esta experiencia transformadora junto a otros participantes de
+                  todo México.
+                </p>
+              </div>
+            </div>
+
+            <!--Registration Form Gratuito-->
+            <div class="col-2-3 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="form-container gratuito-container">
+                <div class="form-image-container">
+                  <img src="images/company-images/extraterrestre.png" alt="Reserva gratuita" class="form-ilustration" />
+                </div>
+                <div class="form-content">
+                  <h3>Registra tu cupo gratuito</h3>
+                  <!-- Formulario para registro gratuito -->
+                  <form id="registro-gratuito-form">
+                    <input type="text" name="name" placeholder="Tu nombre completo" required />
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required />
+                    <input
+                      type="text"
+                      name="doc"
+                      placeholder="Tu numero de documento (INE, pasaporte, etc.)"
+                      required
+                    />
+                    <input type="tel" name="phone" placeholder="Tu número de teléfono" required />
+
+                    <!-- Botón para registro gratuito -->
+                    <button type="button" onclick="sendWhatsAppMessage(event, 'gratuito')" class="button normal-button">
+                      REGISTRAR MI CUPO GRATUITO
+                    </button>
+
+                    <p class="form-note">¡Espacios limitados! Asegura tu lugar ahora.</p>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!--End Registration Form Gratuito-->
+          </div>
+        </section>
+        <!--End of Registro Gratuito Section-->
+
+        <!--VIP Experience Section-->
         <section id="vip" class="text-center scrollto clearfix">
           <div class="premium-background">
             <div class="premium-particles"></div>
@@ -308,13 +357,9 @@
               </h2>
             </div>
 
-            <div class="pricing-container">
-              <!--Pricing Block-->
-              <div
-                class="pricing-block featured col-2 wow fadeInUp"
-                data-wow-delay="0.6s"
-                style="float: none; margin: 0 auto"
-              >
+            <div class="vip-container">
+              <!--VIP Info Block-->
+              <div class="vip-info-block wow fadeInUp" data-wow-delay="0.4s">
                 <div class="pricing-block-content premium-card">
                   <div class="premium-ribbon"><span>Exclusivo</span></div>
                   <h3>Experiencia VIP</h3>
@@ -335,76 +380,42 @@
                   </div>
                 </div>
               </div>
-              <!--End Pricing Block-->
+              <!--End VIP Info Block-->
 
-              <!--Registration Form-->
-              <div class="col-2 wow fadeInUp" data-wow-delay="0.2s" style="float: none; margin: 20px auto">
-                <div style="background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 5px">
-                  <h3 style="margin-bottom: 20px">Reserva tu lugar ahora</h3>
-                  <!-- Formulario para ambos tipos de registro -->
-                  <form id="registration-form">
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Tu nombre completo"
-                      required
-                      style="width: 100%; margin-bottom: 15px"
-                    />
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Tu correo electrónico"
-                      required
-                      style="width: 100%; margin-bottom: 15px"
-                    />
+              <!--VIP Form Block-->
+              <div class="vip-form-block wow fadeInUp" data-wow-delay="0.6s">
+                <div class="premium-card form-card">
+                  <h3>
+                    <span class="premium-star"><i class="fa fa-star"></i></span>Obtén tu acceso VIP<span
+                      class="premium-star"
+                      ><i class="fa fa-star"></i
+                    ></span>
+                  </h3>
+                  <form id="vip-form">
+                    <input type="text" name="name" placeholder="Tu nombre completo" required />
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required />
                     <input
                       type="text"
                       name="doc"
                       placeholder="Tu numero de documento (INE, pasaporte, etc.)"
                       required
-                      style="width: 100%; margin-bottom: 15px"
                     />
-                    <input
-                      type="tel"
-                      name="phone"
-                      placeholder="Tu número de teléfono"
-                      required
-                      style="width: 100%; margin-bottom: 15px"
-                    />
-                    <!-- Contenedor para los botones -->
-                    <div
-                      class="button-container"
-                      style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px"
-                    >
-                      <!-- Botón para registro gratuito -->
-                      <button type="button" onclick="sendWhatsAppMessage(event, false)" class="button normal-button">
-                        REGISTRAR MI CUPO GRATUITO
-                      </button>
+                    <input type="tel" name="phone" placeholder="Tu número de teléfono" required />
 
-                      <!-- Botón para experiencia VIP más llamativo -->
-                      <button
-                        type="button"
-                        onclick="sendWhatsAppMessage(event, true)"
-                        class="button vip-button"
-                        style="
-                          background: var(--gradiente-dorado);
-                          transform: scale(1.05);
-                          padding: 15px;
-                          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-                        "
-                      >
-                        <i class="fa fa-star" style="margin-right: 8px"></i> OBTENER EXPERIENCIA VIP
-                      </button>
-                    </div>
-                    <p style="margin-top: 15px">¡Espacios limitados! Asegura tu lugar ahora.</p>
+                    <!-- Botón para experiencia VIP -->
+                    <button type="button" onclick="sendWhatsAppMessage(event, 'vip')" class="button vip-button">
+                      <i class="fa fa-star"></i> OBTENER EXPERIENCIA VIP
+                    </button>
+
+                    <p class="form-note">¡Plazas VIP muy limitadas! Reserva hoy.</p>
                   </form>
                 </div>
               </div>
-              <!--End Registration Form-->
+              <!--End VIP Form Block-->
             </div>
           </div>
         </section>
-        <!--End of VIP Experience & Registration Section-->
+        <!--End of VIP Experience Section-->
 
         <!--Testimonios en Video-->
         <section id="testimonios-video" class="scrollto clearfix">
@@ -591,14 +602,22 @@
 
     <script>
       // Script para enviar mensajes a WhatsApp
-      function sendWhatsAppMessage(event, isVIP) {
+      function sendWhatsAppMessage(event, type) {
         event.preventDefault();
 
         // Información de contacto del organizador
         const phoneNumber = "573183377229"; // Usa tu número real aquí
 
+        // Determinar qué formulario usar según el tipo
+        const formId = type === "vip" ? "vip-form" : "registro-gratuito-form";
+        const form = document.getElementById(formId);
+
+        if (!form) {
+          console.error("Formulario no encontrado:", formId);
+          return;
+        }
+
         // Obtener datos del formulario
-        const form = document.getElementById("registration-form");
         const name = form.elements["name"].value;
         const email = form.elements["email"].value;
         const doc = form.elements["doc"].value;
@@ -612,7 +631,7 @@
 
         let message = "";
 
-        if (isVIP) {
+        if (type === "vip") {
           message = `Hola, quiero reservar mi EXPERIENCIA VIP para el evento Armonía.%0A%0A`;
           message += `Nombre: ${name}%0A`;
           message += `Email: ${email}%0A`;
@@ -635,38 +654,6 @@
         // Abrir WhatsApp en una nueva ventana
         window.open(whatsappURL, "_blank");
       }
-      // Contador mejorado
-      var countDownDate = new Date();
-      countDownDate.setDate(countDownDate.getDate() + 1);
-
-      var x = setInterval(function () {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("countdown").innerHTML =
-          "Oferta finaliza en: " +
-          (hours < 10 ? "0" + hours : hours) +
-          ":" +
-          (minutes < 10 ? "0" + minutes : minutes) +
-          ":" +
-          (seconds < 10 ? "0" + seconds : seconds);
-
-        if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("countdown").innerHTML = "¡OFERTA EXPIRADA!";
-          // Ocultar botón o tomar otra acción cuando expire
-          var vipButton = document.querySelector("#vip .pricing-block .button");
-          if (vipButton) {
-            vipButton.style.opacity = "0.5";
-            vipButton.style.pointerEvents = "none";
-            vipButton.textContent = "OFERTA EXPIRADA";
-          }
-        }
-      }, 1000);
     </script>
 
     <script>
